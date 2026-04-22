@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HTTP Demo | Protocolo HTTP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="bg-gradient"></div>
+    
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-code"></i> HTTP<span>Demo</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="requests.html"><i class="fas fa-exchange-alt"></i> Requests</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero glass-card animate-fade-in">
+            <div class="hero-badge pulse"><i class="fas fa-globe"></i> Protocolo HTTP/1.1 & HTTP/2</div>
+            <h1>La <span class="gradient-text">base</span> de la comunicación web</h1>
+            <p class="subtitle">Hypertext Transfer Protocol — El lenguaje que impulsa internet</p>
+            <div class="hero-stats">
+                <div class="stat"><i class="fas fa-tachometer-alt"></i> 30+ años</div>
+                <div class="stat"><i class="fas fa-chart-line"></i> 99.9% de la web</div>
+                <div class="stat"><i class="fas fa-code-branch"></i> RESTful APIs</div>
+            </div>
+        </section>
+
+        <div class="cards-grid">
+            <div class="card glass-card card-hover animate-slide-up" style="animation-delay: 0.1s">
+                <div class="card-icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>¿Qué es HTTP?</h3>
+                <p>HTTP es el protocolo fundamental que permite la transferencia de información en la World Wide Web. Define cómo se estructuran y transmiten los mensajes entre clientes (navegadores) y servidores.</p>
+                <div class="card-tag">Fundamento Web</div>
+            </div>
+            <div class="card glass-card card-hover animate-slide-up" style="animation-delay: 0.2s">
+                <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Request → Response</h3>
+                <p>El modelo cliente-servidor funciona mediante solicitudes (Request) que el cliente envía y respuestas (Response) que el servidor retorna. Cada intercambio contiene método, URL, headers y body.</p>
+                <div class="card-tag">Ciclo completo</div>
+            </div>
+            <div class="card glass-card card-hover animate-slide-up" style="animation-delay: 0.3s">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Importancia global</h3>
+                <p>HTTP es el pilar de APIs, navegación web, streaming, microservicios y tecnologías cloud. Sin él, la web interactiva no existiría como la conocemos hoy.</p>
+                <div class="card-tag">Tecnología crítica</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-code"></i> HTTP<span>Demo</span>
+                <p>Demostración educativa del protocolo HTTP</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="requests.html">Simulador HTTP</a>
+                <a href="about.html">Acerca de</a>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><i class="fas fa-code"></i> Tecnologías web · Protocolo HTTP · Demo interactiva</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

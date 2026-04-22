@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Demo | Sobre el proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="bg-gradient"></div>
+    
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-code"></i> HTTP<span>Demo</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="requests.html"><i class="fas fa-exchange-alt"></i> Requests</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero-small glass-card animate-fade-in">
+            <div class="hero-badge"><i class="fas fa-users"></i> Conoce el proyecto</div>
+            <h1>Sobre <span class="gradient-text">HTTP Demo</span></h1>
+            <p>Una herramienta educativa interactiva para comprender el corazón de la web</p>
+        </section>
+
+        <div class="about-grid">
+            <div class="card glass-card full-width animate-slide-up">
+                <div class="objectives-header">
+                    <i class="fas fa-bullseye"></i>
+                    <h2>Objetivos del sistema</h2>
+                </div>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon"><i class="fas fa-eye"></i></div>
+                        <h4>Visualizar HTTP</h4>
+                        <p>Demostrar visualmente el ciclo request-response del protocolo HTTP</p>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon"><i class="fas fa-code-branch"></i></div>
+                        <h4>Métodos HTTP</h4>
+                        <p>Explorar GET, POST y otros métodos mediante simulación interactiva</p>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <h4>Headers & Estados</h4>
+                        <p>Comprender cabeceras HTTP y códigos de respuesta (200, 404, 500)</p>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Diseño Moderno</h4>
+                        <p>Experiencia responsive con efectos glassmorphism y animaciones</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card glass-card full-width animate-slide-up" style="animation-delay: 0.1s">
+                <div class="team-header">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h2>Equipo de desarrollo</h2>
+                    <p>Profesionales apasionados por la tecnología web</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card glass-card-hover">
+                        <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
+                        <h3>Jean Cruz</h3>
+                        <p class="team-role"><i class="fas fa-crown"></i> Frontend Engineer</p>
+                        <p class="team-bio">Experto en UI/UX y animaciones web. Creador de experiencias interactivas.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card-hover">
+                        <div class="team-avatar"><i class="fas fa-user-astronaut"></i></div>
+                        <h3>Adrian Lainez</h3>
+                        <p class="team-role"><i class="fas fa-code"></i> Backend Developer</p>
+                        <p class="team-bio">Especialista en APIs REST y simulación de servidores HTTP.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card-hover">
+                        <div class="team-avatar"><i class="fas fa-user-ninja"></i></div>
+                        <h3>David Ruiz</h3>
+                        <p class="team-role"><i class="fas fa-database"></i> Lead Developer</p>
+                        <p class="team-bio">Especialista en arquitectura web y protocolos HTTP. 8+ años de experiencia.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dev"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card-hover">
+                        <div class="team-avatar"><i class="fas fa-user-secret"></i></div>
+                        <h3>Misael Vanegas</h3>
+                        <p class="team-role"><i class="fas fa-shield-alt"></i> Security Analyst</p>
+                        <p class="team-bio">Auditoría de seguridad en comunicaciones HTTP/HTTPS.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-hackerrank"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-code"></i> HTTP<span>Demo</span>
+                <p>Demostración educativa del protocolo HTTP</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="requests.html">Simulador HTTP</a>
+                <a href="about.html">Acerca de</a>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><i class="fas fa-code"></i> Tecnologías web · Protocolo HTTP · Demo interactiva</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

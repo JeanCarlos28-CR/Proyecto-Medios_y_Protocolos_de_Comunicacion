@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Demo | Simulador de Requests</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="bg-gradient"></div>
+    
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-code"></i> HTTP<span>Demo</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="requests.html" class="active"><i class="fas fa-exchange-alt"></i> Requests</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero-small glass-card animate-fade-in">
+            <div class="hero-badge"><i class="fas fa-terminal"></i> Simulador HTTP</div>
+            <h1>Prueba <span class="gradient-text">GET & POST</span></h1>
+            <p>Interactúa con el protocolo HTTP en tiempo real</p>
+        </section>
+
+        <div class="simulator-grid">
+            <div class="card glass-card control-panel animate-slide-up">
+                <h2><i class="fas fa-cogs"></i> Configurar solicitud</h2>
+                <div class="method-selector">
+                    <button id="btnGet" class="method-btn active-method"><i class="fas fa-download"></i> GET</button>
+                    <button id="btnPost" class="method-btn"><i class="fas fa-upload"></i> POST</button>
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-link"></i> URL (simulada)</label>
+                    <input type="text" id="urlInput" value="https://api.ejemplo.com/usuarios" placeholder="https://api.ejemplo.com/recurso">
+                </div>
+                <div id="postBodyContainer" style="display: none;">
+                    <label><i class="fas fa-database"></i> Body (JSON para POST)</label>
+                    <textarea id="postBody" rows="3" placeholder='{"nombre": "Juan", "email": "juan@ejemplo.com"}'></textarea>
+                </div>
+                <button id="sendRequestBtn" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar solicitud</button>
+                <div id="loadingSpinner" class="spinner-hidden"><i class="fas fa-circle-notch fa-spin"></i> Procesando petición HTTP...</div>
+            </div>
+
+            <div class="terminal-card animate-slide-up" style="animation-delay: 0.1s">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fas fa-terminal"></i> response@http-demo: ~/respuesta
+                    </div>
+                    <div class="terminal-status">
+                        <i class="fas fa-circle"></i> HTTP Simulator
+                    </div>
+                </div>
+                <div id="responseDisplay" class="terminal-body">
+                    <div class="terminal-placeholder">
+                        <span class="prompt">$</span> curl -X GET https://api.ejemplo.com/
+                        <br>
+                        <span class="prompt">></span> Esperando solicitud...
+                        <br>
+                        <span class="prompt">></span> Presiona "Enviar solicitud" para iniciar
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card glass-card info-http animate-slide-up" style="animation-delay: 0.2s">
+            <h3><i class="fas fa-question-circle"></i> ¿Cómo funciona el simulador?</h3>
+            <div class="info-grid">
+                <div><i class="fas fa-check-circle"></i> Simula request/response HTTP completos</div>
+                <div><i class="fas fa-check-circle"></i> Headers: Host, User-Agent, Content-Type</div>
+                <div><i class="fas fa-check-circle"></i> Códigos: 200 ✓ | 404 ✗ | 500 ⚠</div>
+                <div><i class="fas fa-check-circle"></i> Tiempo de respuesta simulado con delay</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-code"></i> HTTP<span>Demo</span>
+                <p>Demostración educativa del protocolo HTTP</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="requests.html">Simulador HTTP</a>
+                <a href="about.html">Acerca de</a>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><i class="fas fa-code"></i> Tecnologías web · Protocolo HTTP · Demo interactiva</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
